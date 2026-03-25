@@ -1,56 +1,253 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urban Brew Café</title>
 
-<title>LeadFlow CRM Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="container">
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Urban Brew</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Reserve</a></li>
+    </ul>
+    <a href="#contact" class="nav-btn">Book Now</a>
+  </header>
 
-<h1>LeadFlow CRM</h1>
-<p class="subtitle">Client Lead Management Dashboard</p>
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-content reveal">
+      <p class="hero-tag">Premium Coffee • Cozy Ambience • Great Food</p>
+      <h1>Crafted Coffee,<br>Warm Vibes & Unforgettable Taste</h1>
+      <p>
+        Welcome to Urban Brew Café — your perfect place to relax, sip, work, and enjoy handcrafted drinks and delicious bites in a stylish atmosphere.
+      </p>
+      <div class="hero-buttons">
+        <a href="#menu" class="btn primary">Explore Menu</a>
+        <a href="#contact" class="btn secondary">Reserve a Table</a>
+      </div>
+    </div>
+  </section>
 
-<div class="stats">
+  <!-- Stats -->
+  <section class="stats">
+    <div class="stat-box reveal">
+      <h2>12K+</h2>
+      <p>Happy Customers</p>
+    </div>
+    <div class="stat-box reveal">
+      <h2>50+</h2>
+      <p>Menu Items</p>
+    </div>
+    <div class="stat-box reveal">
+      <h2>4.8★</h2>
+      <p>Average Rating</p>
+    </div>
+    <div class="stat-box reveal">
+      <h2>7 Days</h2>
+      <p>Open Every Week</p>
+    </div>
+  </section>
 
-<div class="stat-card">
-<i class="fa-solid fa-users"></i>
-<h2 id="totalLeads">0</h2>
-<p>Total Leads</p>
-</div>
+  <!-- Menu -->
+  <section class="section" id="menu">
+    <div class="section-title reveal">
+      <p>Our Specials</p>
+      <h2>Popular Menu</h2>
+    </div>
 
-<div class="stat-card">
-<i class="fa-solid fa-user-plus"></i>
-<h2 id="activeLeads">0</h2>
-<p>Active Leads</p>
-</div>
+    <div class="menu-grid">
+      <div class="menu-card reveal">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80" alt="Coffee">
+        <div class="menu-content">
+          <h3>Signature Cappuccino</h3>
+          <p>Rich espresso blended with silky milk foam for a smooth café experience.</p>
+          <span>₹180</span>
+        </div>
+      </div>
 
-</div>
+      <div class="menu-card reveal">
+        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=800&q=80" alt="Latte">
+        <div class="menu-content">
+          <h3>Vanilla Latte</h3>
+          <p>A creamy classic with sweet vanilla notes and premium coffee beans.</p>
+          <span>₹220</span>
+        </div>
+      </div>
 
-<div class="form">
+      <div class="menu-card reveal">
+        <img src="https://images.unsplash.com/photo-1551024709-8f23befc6cf7?auto=format&fit=crop&w=800&q=80" alt="Dessert">
+        <div class="menu-content">
+          <h3>Chocolate Brownie</h3>
+          <p>Warm gooey brownie served fresh — the perfect sweet side for coffee.</p>
+          <span>₹160</span>
+        </div>
+      </div>
 
-<input id="name" placeholder="Client Name">
-<input id="email" placeholder="Email">
-<input id="phone" placeholder="Phone">
+      <div class="menu-card reveal">
+        <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=800&q=80" alt="Sandwich">
+        <div class="menu-content">
+          <h3>Cheese Sandwich</h3>
+          <p>Toasted golden bread layered with cheese, veggies, and café-style flavor.</p>
+          <span>₹190</span>
+        </div>
+      </div>
 
-<button onclick="addLead()">Add Lead</button>
-<input id="search" placeholder="Search leads..." onkeyup="searchLeads()">
+      <div class="menu-card reveal">
+        <img src="https://images.unsplash.com/photo-1464306076886-da185f6a9d05?auto=format&fit=crop&w=800&q=80" alt="Cold Coffee">
+        <div class="menu-content">
+          <h3>Cold Coffee Blast</h3>
+          <p>Chilled coffee delight topped with froth and a refreshing creamy finish.</p>
+          <span>₹210</span>
+        </div>
+      </div>
 
-<button onclick="exportCSV()">Export Leads</button>@
+      <div class="menu-card reveal">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Pasta">
+        <div class="menu-content">
+          <h3>White Sauce Pasta</h3>
+          <p>Comfort food favorite with creamy sauce, herbs, and rich café presentation.</p>
+          <span>₹260</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-</div>
+  <!-- About -->
+  <section class="section about" id="about">
+    <img class="reveal" src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1000&q=80" alt="Cafe Interior">
+    <div class="about-text reveal">
+      <p class="small-title">About Us</p>
+      <h2>More Than Just Coffee</h2>
+      <p>
+        Urban Brew Café is designed for people who love quality coffee, cozy corners, stylish interiors, and memorable food experiences.
+      </p>
+      <p>
+        Whether you're here for a work session, a catch-up with friends, or a peaceful solo evening, our café offers the perfect vibe and service.
+      </p>
+      <a href="#contact" class="btn primary">Reserve Your Visit</a>
+    </div>
+  </section>
 
-<div id="leadContainer" class="leadContainer"></div>
+  <!-- Features -->
+  <section class="section">
+    <div class="section-title reveal">
+      <p>Why Choose Us</p>
+      <h2>What Makes Us Special</h2>
+    </div>
 
-</div>
+    <div class="feature-grid">
+      <div class="feature-card reveal">
+        <h3>Freshly Brewed Daily</h3>
+        <p>Premium beans, expert brewing, and café-quality consistency in every cup.</p>
+      </div>
+      <div class="feature-card reveal">
+        <h3>Cozy Premium Ambience</h3>
+        <p>Modern interiors, warm lighting, and a perfect space for comfort and style.</p>
+      </div>
+      <div class="feature-card reveal">
+        <h3>Great for Meetings</h3>
+        <p>Perfect place for casual meetings, remote work, and meaningful conversations.</p>
+      </div>
+      <div class="feature-card reveal">
+        <h3>Quick Reservations</h3>
+        <p>Customers can easily book a visit or send an inquiry through the website.</p>
+      </div>
+    </div>
+  </section>
 
-<script src="script.js"></script>
+  <!-- Gallery -->
+  <section class="section" id="gallery">
+    <div class="section-title reveal">
+      <p>Inside Urban Brew</p>
+      <h2>Gallery</h2>
+    </div>
 
+    <div class="gallery-grid">
+      <img class="reveal" src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=800&q=80" alt="">
+      <img class="reveal" src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&fit=crop&w=800&q=80" alt="">
+      <img class="reveal" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80" alt="">
+      <img class="reveal" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="">
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section" id="reviews">
+    <div class="section-title reveal">
+      <p>Customer Love</p>
+      <h2>What People Say</h2>
+    </div>
+
+    <div class="review-grid">
+      <div class="review-card reveal">
+        <p>"Beautiful ambience, amazing coffee, and very friendly service. One of my favorite cafés!"</p>
+        <h4>- Priya</h4>
+      </div>
+      <div class="review-card reveal">
+        <p>"Perfect place to sit and work. Loved the vibe, the pasta, and the cold coffee."</p>
+        <h4>- Rahul</h4>
+      </div>
+      <div class="review-card reveal">
+        <p>"Looks premium, tastes great, and feels very welcoming. Definitely worth visiting."</p>
+        <h4>- Sneha</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section contact" id="contact">
+    <div class="contact-left reveal">
+      <p class="small-title">Reserve Your Visit</p>
+      <h2>Book Your Table or Send an Inquiry</h2>
+      <p><strong>📍 Address:</strong> 24 Brew Street, City Center, Nellore</p>
+      <p><strong>📞 Phone:</strong> +91 98765 43210</p>
+      <p><strong>🕒 Timings:</strong> 9:00 AM – 10:00 PM</p>
+      <p><strong>✉ Email:</strong> hello@urbanbrewcafe.com</p>
+      <p>
+        If you want to reserve a table, ask about menu specials, or contact the café for general inquiries, simply fill out the form.
+      </p>
+    </div>
+
+    <div class="contact-form reveal">
+      <form action="https://formsubmit.co/eswardivya688@gmail.com" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <input type="text" name="subject" placeholder="Subject" required>
+  <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_subject" value="New Reservation / Inquiry">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html">
+
+  <button type="submit">Send Message</button>
+</form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <h2>Urban Brew Café</h2>
+      <p>Crafted Coffee. Warm Vibes. Memorable Moments.</p>
+      <p>© 2026 Urban Brew Café. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
