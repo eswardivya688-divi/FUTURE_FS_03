@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>LeadFlow CRM Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>LeadFlow CRM</h1>
+<p class="subtitle">Client Lead Management Dashboard</p>
+
+<div class="stats">
+
+<div class="stat-card">
+<i class="fa-solid fa-users"></i>
+<h2 id="totalLeads">0</h2>
+<p>Total Leads</p>
+</div>
+
+<div class="stat-card">
+<i class="fa-solid fa-user-plus"></i>
+<h2 id="activeLeads">0</h2>
+<p>Active Leads</p>
+</div>
+
+</div>
+
+<div class="form">
+
+<input id="name" placeholder="Client Name">
+<input id="email" placeholder="Email">
+<input id="phone" placeholder="Phone">
+
+<button onclick="addLead()">Add Lead</button>
+<input id="search" placeholder="Search leads..." onkeyup="searchLeads()">
+
+<button onclick="exportCSV()">Export Leads</button>@
+
+</div>
+
+<div id="leadContainer" class="leadContainer"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
